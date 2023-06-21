@@ -1,5 +1,4 @@
 const express = require("express");
-
 // We create our own server named app
 // Express server will be handling requests and responses
 const app = express();
@@ -14,10 +13,9 @@ app.get("/about", (request, response, next) => {
   response.sendFile(__dirname + "/views/about.html");
 });
 
-app.get("/works", (request, response, next) => {
+app.get("/work", (request, response, next) => {
   response.sendFile(__dirname + "/views/work.html");
 });
 
-// ... the previously added code
 // Server Started
 app.listen(3000, () => console.log("My first app listening on port 3000! "));
